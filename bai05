@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int N;
+    printf("Nhập N: ");
+    scanf("%d", &N);
+    if (N < 2) {
+        printf("K0 nto\n");
+    } 
+    else {
+        int i = 2;
+        while (i <= sqrt(N)) {
+            if (N % i == 0) {
+                printf("K0 nto\n");
+                return 0;
+            }
+            i++;
+        }
+        printf("Co nto\n");
+    }
+    return 0;
+}
